@@ -8,13 +8,10 @@ Both can be automatically generated
 when using `clap`,
 via the `man` backend.
 
-Let's assume you use `structopt`
-to create a CLI.
-
 ```rust
 /// It's like `cat` but in Rust
 #[derive(Clap)]
-pub struct Rat {
+pub struct Head {
     /// file to load
     #[clap(parse(from_os_str))]
     pub file: PathBuf,
@@ -25,14 +22,14 @@ pub struct Rat {
 ```
 
 Secondly, you need to use a `build.rs`
-to generate a manual at compile-time
+to generate the manual file at compile-time
 from the definition of your app
 in code.
 
 There are a few things to keep in mind
-such as how you want to package your binary
+(such as how you want to package your binary)
 but for now
-we simply put the `man` page
+we simply put the `man` file
 next to our `src` folder.
 
 ```rust
@@ -48,7 +45,7 @@ fn main() {
 
     use clap_generate::gen_manuals;
     for man in gen_manuals(&app) {
-        let name = "rat.1"; // FIXME: Extract this from man!
+        let name = "rat.1";
         let mut out = fs::File::create("rat.1").unwrap();
         use std::io::Write;
         out.write_all(man.render().as_bytes()).unwrap();
@@ -58,7 +55,7 @@ fn main() {
 
 When you now compile your application
 there will be a `rat.1` file 
-in your project director.
+in your project directory.
 
 If you open that in `man`
 you'll be able to admire your free documentation.
