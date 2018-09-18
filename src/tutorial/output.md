@@ -91,10 +91,10 @@ eprintln!("This is an error! :(");
 <aside>
 
 **Beware**: Printing escape codes can be dangerous,
-putting the user's terinal into a weird state.
+putting the user's terminal into a weird state.
 Always be careful when manually printing them!
 
-Ideally you should be using the `ansi_term` crate
+Ideally you should be using a crate like `ansi_term`
 when dealing with raw escape codes
 to make your (and your user's) life easier.
 
