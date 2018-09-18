@@ -9,7 +9,6 @@ when using `clap`,
 via the `man` backend.
 
 ```rust
-/// It's like `cat` but in Rust
 #[derive(Clap)]
 pub struct Head {
     /// file to load
@@ -45,8 +44,8 @@ fn main() {
 
     use clap_generate::gen_manuals;
     for man in gen_manuals(&app) {
-        let name = "rat.1";
-        let mut out = fs::File::create("rat.1").unwrap();
+        let name = "head.1";
+        let mut out = fs::File::create("head.1").unwrap();
         use std::io::Write;
         out.write_all(man.render().as_bytes()).unwrap();
     }
@@ -54,7 +53,7 @@ fn main() {
 ```
 
 When you now compile your application
-there will be a `rat.1` file 
+there will be a `head.1` file 
 in your project directory.
 
 If you open that in `man`
