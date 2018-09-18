@@ -1,1 +1,64 @@
 # Rendering documentation for you CLI apps
+
+Documentation for CLIs usually consists of
+a `--help` section in the command
+and a manual (`man`) page.
+
+Both can be automatically generated
+when using `clap`,
+via the `man` backend.
+
+Let's assume you use `structopt`
+to create a CLI.
+
+```rust
+/// It's like `cat` but in Rust
+#[derive(Clap)]
+pub struct Rat {
+    /// file to load
+    #[clap(parse(from_os_str))]
+    pub file: PathBuf,
+    /// how many lines to print
+    #[clap(short = "n", default_value = "5")]
+    pub count: usize,
+}
+```
+
+Secondly, you need to use a `build.rs`
+to generate a manual at compile-time
+from the definition of your app
+in code.
+
+There are a few things to keep in mind
+such as how you want to package your binary
+but for now
+we simply put the `man` page
+next to our `src` folder.
+
+```rust
+extern crate clap;
+extern crate clap_generate;
+
+#[path="src/cli.rs"]
+mod cli;
+
+fn main() {
+    use clap::IntoApp;
+    let app = cli::Head::into_app();
+
+    use clap_generate::gen_manuals;
+    for man in gen_manuals(&app) {
+        let name = "rat.1"; // FIXME: Extract this from man!
+        let mut out = fs::File::create("rat.1").unwrap();
+        use std::io::Write;
+        out.write_all(man.render().as_bytes()).unwrap();
+    }
+}
+```
+
+When you now compile your application
+there will be a `rat.1` file 
+in your project director.
+
+If you open that in `man`
+you'll be able to admire your free documentation.
