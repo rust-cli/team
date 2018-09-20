@@ -100,6 +100,31 @@ to make your (and your user's) life easier.
 
 </aside>
 
+
+<aside class="note">
+
+**Performance note:**
+Printing to the terminal is surprisingly slow!
+If you call things like `println!` in a loop,
+it can easily become a bottleneck in an otherwise fast program.
+
+To speed this up,
+it helps to acquire a lock on `stdout` (or `stderr`)
+and use `writeln!` to print to it directly:
+
+```rust
+use std::io::{self, Write};
+
+let stdout = io::stdout();
+let mut handle = stdout.lock();
+writeln!(handle, "foo: {}", 42)?;
+```
+
+Another trick would be to buffer the writing yourself.
+(By default the output gets flushed to the terminal on each newline.)
+
+</aside>
+
 ## Showing a progress bar
 
 Some CLI applications run less than a second,
