@@ -3,7 +3,7 @@
 Over the decades of people doing software development
 one truth has been found:
 Untested software rarely works.
-(Many people would go that far and add
+(Many people would go as far as saying: 
 "Most tested software doesn't work either."
 But we are all optimists here, right?)
 So, to ensure that your program does what you expect it to do,
