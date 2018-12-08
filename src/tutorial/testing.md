@@ -1,7 +1,7 @@
 # Testing
 
 Over the decades of people doing software development
-a pattern has emerged:
+one truth has been found:
 Untested software rarely works.
 (Many people would go that far and add
 "Most tested software doesn't work either."
