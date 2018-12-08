@@ -60,7 +60,7 @@ Use it for, well, informative output.
 (Some applications that lean towards a more quiet output style
 might only show warnings and errors by default.)
 
-Additionally. it's always a good idea to use similar prefixes
+Additionally, it's always a good idea to use similar prefixes
 and sentence structure across log messages, 
 making it easy to `grep` or filter for them.
 A message should provide enough context by itself
