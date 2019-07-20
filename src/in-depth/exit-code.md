@@ -31,6 +31,8 @@ Please see its API documentation for the possible values to use.
 One way to use it is like this:
 
 ```rust,ignore
+extern crate exitcode;
+// ...stuff for the actual work...
 fn main() {
     // ...actual work...
     match result {
