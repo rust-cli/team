@@ -1,5 +1,5 @@
-use failure::ResultExt;
 use exitfailure::ExitFailure;
+use failure::ResultExt;
 
 fn main() -> Result<(), ExitFailure> {
     let path = "test.txt";

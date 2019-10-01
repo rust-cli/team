@@ -1,6 +1,6 @@
-use structopt::StructOpt;
-use failure::ResultExt;
 use exitfailure::ExitFailure;
+use failure::ResultExt;
+use structopt::StructOpt;
 
 /// Search for a pattern in a file and display the lines that contain it.
 #[derive(StructOpt)]

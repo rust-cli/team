@@ -1,9 +1,9 @@
 // #[macro_use] extern crate convey;
 
+use convey::components::{newline, text};
+use convey::{human, json, render_for_humans, render_json, span};
 use serde_derive::Serialize;
 use structopt::StructOpt;
-use convey::{json, human, render_for_humans, render_json, span};
-use convey::components::{newline, text};
 
 /// Demo various output things
 #[derive(StructOpt)]

@@ -1,5 +1,5 @@
-use structopt::StructOpt;
 use serde_json::json;
+use structopt::StructOpt;
 
 /// Search for a pattern in a file and display the lines that contain it.
 #[derive(StructOpt)]
@@ -12,10 +12,13 @@ struct Cli {
 fn main() {
     let args = Cli::from_args();
     if args.json {
-        println!("{}", json!({
-            "type": "message",
-            "content": "Hello world",
-        }));
+        println!(
+            "{}",
+            json!({
+                "type": "message",
+                "content": "Hello world",
+            })
+        );
     } else {
         println!("Hello world");
     }
