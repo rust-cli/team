@@ -6,7 +6,9 @@ also known as "Rust CLIQuE" (Rust CLI Quality Enhancement).
 - [Working groups?](https://internals.rust-lang.org/t/announcing-the-2018-domain-working-groups/6737)
 - [Announcement of this WG](https://internals.rust-lang.org/t/announcing-the-cli-working-group/6872/1)
 - Chat with us
+  - [Zulip](https://rust-lang.zulipchat.com/#narrow/stream/220302-wg-cli)
   - [Discord](https://discord.gg/dwq4Zme)
+
 
 ## Our goal
 
