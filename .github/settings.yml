@@ -51,12 +51,6 @@ labels:
   - name: "A-book"
     description: "Area: documenting how to create CLIs"
     color: '#f7e101'
-  - name: "C-bug"
-    color: '#f5f1fd'
-    description: "Category: Things not working as expected"
-  - name: "C-enhancement"
-    color: '#f5f1fd'
-    description: "Category: Raise on the bar on expectations"
   - name: "C-tracking-issue"
     description: "Category: A tracking issue for an unstable feature"
     color: '#f5f1fd'
