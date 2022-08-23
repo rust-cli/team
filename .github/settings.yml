@@ -45,6 +45,9 @@ labels:
   - name: "A-doc"
     description: "Area: Documenting your CLI (e.g. man pages)"
     color: '#f7e101'
+  - name: "A-distribution"
+    description: "Area: Licensing, packaging, etc"
+    color: '#f7e101'
   - name: "A-book"
     description: "Area: documenting how to create CLIs"
     color: '#f7e101'
