@@ -21,6 +21,9 @@ labels:
   - name: "A-argparse"
     description: "Area: Argument parsing"
     color: '#f7e101'
+  - name: "A-ergonomics"
+    description: "Area: Ease of solving CLI related problems (e.g. filesystem interactions)"
+    color: '#f7e101'
   - name: "A-styling"
     description: "Area: Terminal output styling"
     color: '#f7e101'
