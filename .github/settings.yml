@@ -1,0 +1,70 @@
+# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+
+repository:
+  description: CLI working group
+  homepage: "https://rust-cli.github.io/book"
+  topics: rust cli command-line
+  has_issues: true
+  has_projects: false
+  has_wiki: false
+  has_downloads: false
+  default_branch: master
+
+  allow_squash_merge: true
+  allow_merge_commit: true
+  allow_rebase_merge: true
+
+  allow_auto_merge: true
+  delete_branch_on_merge: true
+
+labels:
+  - name: "A-argparse"
+    description: "Area: Argument parsing"
+    color: '#f7e101'
+  - name: "A-styling"
+    description: "Area: Terminal output styling"
+    color: '#f7e101'
+  - name: "A-interaction"
+    description: "Area: Interactive terminal (prompts, progress bars)"
+    color: '#f7e101'
+  - name: "A-tui"
+    description: "Area: TUI (full control of terminal)"
+    color: '#f7e101'
+  - name: "A-diagnostic"
+    description: "Area: Program diagnostics (errors, panics, logging, etc)"
+    color: '#f7e101'
+  - name: "A-config"
+    description: "Area: Configuration management"
+    color: '#f7e101'
+  - name: "A-testing-cli"
+    description: "Area: One-shot testing of CLIs (no interaction)"
+    color: '#f7e101'
+  - name: "A-testing-tui"
+    description: "Area: Testing of time and user dependent CLIs"
+    color: '#f7e101'
+  - name: "A-doc"
+    description: "Area: Documenting your CLI (e.g. man pages)"
+    color: '#f7e101'
+  - name: "A-book"
+    description: "Area: documenting how to create CLIs"
+    color: '#f7e101'
+  - name: "C-bug"
+    color: '#f5f1fd'
+    description: "Category: Things not working as expected"
+  - name: "C-enhancement"
+    color: '#f5f1fd'
+    description: "Category: Raise on the bar on expectations"
+  - name: "C-tracking-issue"
+    description: "Category: A tracking issue for an unstable feature"
+    color: '#f5f1fd'
+  - name: "E-help-wanted"
+    description: "Call for participation: Help is requested to fix this issue."
+    color: '#02E10C'
+
+branches:
+  - name: master
+    protection:
+      required_pull_request_reviews: null
+      required_conversation_resolution: true
+      enforce_admins: false
+      restrictions: null
