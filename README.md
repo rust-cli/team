@@ -8,24 +8,38 @@ also known as "Rust CLIQuE" (Rust CLI Quality Enhancement).
 - Chat with us on [Zulip](https://rust-lang.zulipchat.com/#narrow/stream/220302-wg-cli)
 
 
-## Our goal
+## Vision
 
 Let's make this a true statement:
 
 Rust makes writing crossplatform, tested, modern command line applications frictionless
 while incorporating industry best practices and providing great documentation.
 
-## What's a CLI?
+## Role of WG-CLI
 
-For our intents and purposes, a CLI is any program that
+- Identify gaps between here and the vision
+- Mentoring people working to fill the gaps
+- Keeping the lights on for core CLI crates
+- Venue for CLI authors to collaborate
 
-* Launches in a terminal
-* Accepts configuration from various sources, such as command line arguments, environment variables, or configuration files
-* Runs to completion with minimal/no user interaction
-* Accepts input from `stdin`, files, or network
-* Performs processing on some input (files, network, `stdin`) based on the configuration specified
-* Communicates via standard outputs (files, network, `std{out,err}`)
+## Focus Areas
 
-(We [specifically][i4] don't want to focus on "TUI" apps right now.)
+- [Argument parsing](https://github.com/rust-cli/team/labels/A-argparse)
+  - [argpaerse-rosetta-rs](https://github.com/rosetta-rs/argparse-rosetta-rs)
+- [Ease of solving CLI related problems (e.g. filesystem interactions)](https://github.com/rust-cli/team/labels/A-ergonomics)
+- [Terminal output styling](https://github.com/rust-cli/team/labels/A-styling)
+- [Interactive terminal (prompts, progress bars)](https://github.com/rust-cli/team/labels/A-interaction)
+- [TUI (full control of terminal)](https://github.com/rust-cli/team/labels/A-tui)
+- [Program diagnostics (errors, panics, logging, etc)](https://github.com/rust-cli/team/labels/A-diagnostic)
+- [Configuration management](https://github.com/rust-cli/team/labels/A-config)
+- [One-shot testing of CLIs (no interaction)](https://github.com/rust-cli/team/labels/A-testing-cli)
+  - [assert_cmd](https://github.com/assert-rs/assert_cmd) / [assert_fs](https://github.com/assert-rs/assert_cmd)
+  - [snapbox](https://github.com/assert-rs/trycmd/tree/main/crates/snapbox)
+  - [trycmd](https://github.com/assert-rs/trycmd/)
+- [Testing of time and user dependent CLIs](https://github.com/rust-cli/team/labels/A-testing-tui)
+- [Documenting your CLI (e.g. man pages)](https://github.com/rust-cli/team/labels/A-doc)
+- [Licensing, packaging, etc](https://github.com/rust-cli/team/labels/A-distribution)
+- [Documenting how to create CLIs](https://github.com/rust-cli/team/labels/A-book)
+  - [book](https://github.com/rust-cli/book)
 
-[i4]: https://github.com/rust-cli/meta/issues/4
+While most of these cross-domains with GUIs, web backends, etc, they are also commonly in the critical path a CLI and so in-scope.

@@ -52,7 +52,7 @@ labels:
     description: "Area: Licensing, packaging, etc"
     color: '#f7e101'
   - name: "A-book"
-    description: "Area: documenting how to create CLIs"
+    description: "Area: Documenting how to create CLIs"
     color: '#f7e101'
   - name: "C-tracking-issue"
     description: "Category: A tracking issue for an unstable feature"
