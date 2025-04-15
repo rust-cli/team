@@ -33,7 +33,7 @@ while incorporating industry best practices and providing great documentation.
 - [Program diagnostics (errors, panics, logging, etc)](https://github.com/rust-cli/team/labels/A-diagnostic)
 - [Configuration management](https://github.com/rust-cli/team/labels/A-config)
 - [One-shot testing of CLIs (no interaction)](https://github.com/rust-cli/team/labels/A-testing-cli)
-  - [assert_cmd](https://github.com/assert-rs/assert_cmd) / [assert_fs](https://github.com/assert-rs/assert_cmd)
+  - [assert_cmd](https://github.com/assert-rs/assert_cmd) / [assert_fs](https://github.com/assert-rs/assert_fs)
   - [snapbox](https://github.com/assert-rs/trycmd/tree/main/crates/snapbox)
   - [trycmd](https://github.com/assert-rs/trycmd/)
 - [Testing of time and user dependent CLIs](https://github.com/rust-cli/team/labels/A-testing-tui)
